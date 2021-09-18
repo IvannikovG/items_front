@@ -1,7 +1,6 @@
 # items_exchange_front 
 
-A [re-frame](https://github.com/day8/re-frame) application designed to ... well, that part is up to
-you.
+A [re-frame](https://github.com/day8/re-frame) application designed to serve as frontend for items exchange.
 
 ## Getting Started
 
