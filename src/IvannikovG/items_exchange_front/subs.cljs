@@ -12,3 +12,8 @@
  ::last-event
  (fn [db]
    (:last-event db)))
+
+(re-frame/reg-sub
+ ::items
+ (fn [db]
+   (:items db)))
