@@ -69,6 +69,8 @@
   #_[input "Enter name" "plc-holder"])
 
 
+(defn init []
+  {})
 
 (defn ui
   []
