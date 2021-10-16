@@ -55,18 +55,35 @@
    [:input {:class (c [:p 2] [:mr 2] [:ml 2] :rounded :border [:bg :green-600])
             :placeholder placeholder}]
    [:button {:class (c :font-light [:mr 2] [:ml 2] [:p 2] :rounded :border [:bg :yellow-600])
-             :placeholder placeholder} "delete"]
+             :placeholder placeholder} "delete"]])
+
+(def element-style
+  (c :flex [:bg :green-300] :font-mono :border))
 
 
+(defn form
+  []
+  [:div {:class (c :w-full :flex :border :rounded :justify-between)}
+   [:div
+    [:div {:class (c [:w 60] [:h 60]
+                     [:bg :yellow-200] :border :rounded)} "Fotka"]
+    [:div "Items"]]
+   [:div {:class (c :flex-col :justify-end)}
+    [:div {:class element-style} [:div {:class (c [:m 2])} "Author:"] [:div {:class (c [:m 2])} "Author name"]]
+    [:div {:class element-style} [:div {:class (c [:m 2])} "Sample 1:"] [:div {:class (c [:m 2])} "Sample 1"]]
+    [:div {:class element-style} [:div {:class (c [:m 2])} "Sample 2:"] [:div {:class (c [:m 2])} "Sample 2"]]
+    [:div "Explanation"]
+    [:div "Explanation"]
+    [:div "Explanation"]]
    ])
 
 (defn page
   []
-  [:div
+  [:div {:class (c [:w 720])}
    [simple-input "Enter name" "plc-holder"]
    [simple-input "Enter name" "plc-holder"]
-   [quadrats]]
-  #_[input "Enter name" "plc-holder"])
+   [quadrats]
+   [form]])
 
 
 (defn init []
