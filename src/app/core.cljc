@@ -83,6 +83,18 @@
    [simple-input "Enter name" "plc-holder"]
    [simple-input "Enter name" "plc-holder"]
    [quadrats]
+   [:div "AAA"]
+   [:input {:type "file"
+            :name "photo-upload"
+            :on-change
+            (fn [this]
+              (if (not (= "" (-> this .-target .-value)))
+                (let [^js/File file (-> this .-target .-files (aget 0))]
+                  ;; your logic here ...
+                  ;; now reset the widget to let user upload a new one
+                  (println (-> this .-target .-value))
+                  (println (.-target file))
+                  (set! (-> this .-target .-value) ""))))} ]
    [form]])
 
 
